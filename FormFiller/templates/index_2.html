@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Filler Web App</title>
+</head>
+<body>
+    <h1>Form Filler Web App</h1>
+    <form action="/process_form" method="post" enctype="multipart/form-data">
+        <label for="formFile">Choose a form file:</label>
+        <input type="file" name="formFile" id="formFile" accept=".txt, .csv, .docx, .doc, .pdf, .xlsx">
+        
+        <label for="dataFile">Choose a data file:</label>
+        <input type="file" name="dataFile" id="dataFile" accept=".txt, .csv, .docx, .doc, .pdf, .xlsx">
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    {% if output %}
+        <h2>Processing Result:</h2>
+        <pre>{{ output }}</pre>
+        
+        {% if filled_file_path %}
+            <h2>Filled File:</h2>
+            <p><a href="{{ filled_file_path }}" target="_blank">View Filled File</a></p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>

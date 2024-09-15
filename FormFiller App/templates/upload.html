@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Form</title>
+</head>
+<body>
+    <h1>Upload Form</h1>
+    <form method="POST" enctype="multipart/form-data" action="/process">
+        <input type="file" name="word_file" accept=".doc,.docx,.pdf">
+        <input type="file" name="data_file" accept=".txt,.csv">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

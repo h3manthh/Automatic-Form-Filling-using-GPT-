@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Filler</title>
+</head>
+<body>
+    <h1>Form Filler</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data">
+        <label for="input_file">Select Input File:</label>
+        <input type="file" name="input_file" accept=".pdf, .docx, .doc, .xlsx, .xls">
+        <br>
+        <label for="data_file">Select Data File:</label>
+        <input type="file" name="data_file" accept=".txt, .csv, .xlsx, .xls">
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

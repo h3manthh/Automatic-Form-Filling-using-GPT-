@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Filler Results</title>
+</head>
+<body>
+    <h1>Form Filler Results</h1>
+    {% for result in results %}
+        <h2>{{ result['file_name'] }}</h2>
+        <h3>Questions:</h3>
+        <ul>
+            {% for question in result['questions'] %}
+                <li>{{ question }}</li>
+            {% endfor %}
+        </ul>
+        <h3>Answers:</h3>
+        <ul>
+            {% for key, value in result['answers_for_questions'].items() %}
+                <li>{{ key }}: {{ value }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

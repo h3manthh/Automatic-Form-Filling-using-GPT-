@@ -1,0 +1,14 @@
+cookie:
+  expiry_days: 30
+  key: random_signature_key
+  name: random_cookie_name
+credentials:
+  usernames:
+    hemanth:
+      email: projecthemanth00@gmail.com
+      logged_in: true
+      name: Hemanth Kumar
+      password: $2b$12$9qrLg7zgDZWzYxaRKuNN8.v8uHMd2vkUCTo6A1APrdADkNQMBZRqe
+preauthorized:
+  emails:
+  - projecthemanth00@gmail.com

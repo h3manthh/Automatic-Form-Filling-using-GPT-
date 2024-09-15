@@ -1,0 +1,13 @@
+credentials:
+  usernames:
+    Hemanth:
+      email: Hemanth
+      name: Hemanth Kumar
+      password: $2b$12$Yvau6eACe1ObU3i004KGwOu2tG9Vij/dLARIvvnL5giW63PLpTKNS # To be replaced with hashed password
+cookie:
+  expiry_days: 30
+  key: random_signature_key # Must be string
+  name: random_cookie_name
+preauthorized:
+  emails:
+  - projecthemanth00@gmail.com
